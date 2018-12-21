@@ -7,7 +7,8 @@ const Seed = require('./seed')
 //Set up default mongoose connection
 var mongoDB = 'mongodb://127.0.0.1/recipes';
 mongoose.connect(mongoDB, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useCreateIndex: true,
 });
 // Get Mongoose to use the global promise library
 mongoose.Promise = global.Promise;
